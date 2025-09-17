@@ -1,7 +1,7 @@
 import logo from './logo.svg';
 import './App.css';
-import YardageCalc from './YardageCalc.js';
-import GaugeCalc from './GaugeCalc.js';
+import YardageCalc from './YardageCalc';
+import GaugeCalc from './GaugeCalc';
 
 function App() {
   return (

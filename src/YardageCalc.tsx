@@ -4,6 +4,10 @@ const YardageCalc: React.FC = () => {
   const [skeinCount, setSkeinCount] = useState<number | string>(0);
   const [suggestedYarnWeight, setSuggestedYarnWeight] = useState<number>(0);
   const [suggestedYarnYardage, setSuggestedYarnYardage] = useState<number>(0);
+  const [chosenYarnYardage, setChosenYarnYardage] = useState<number>(0);
+  const [patternSuggestedWeight, setPatternSuggestedWeight] = useState<number>(0);
+  const [chosenYarnWeight, setChosenYarnWeight] = useState<number>(0);
+  const [includeWastage, setIncludeWastage] = useState<boolean>(false);
 
   function calculateYardageBasedOnSuggestedYard(
     suggestedYarnWeight: number,
@@ -43,7 +47,6 @@ const YardageCalc: React.FC = () => {
       chosenYarnYardage,
       chosenYarnWeight,
       includeWastage,
-      false // includeWastage
     );
   }
 
