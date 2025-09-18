@@ -15,26 +15,17 @@ const YardageCalc: React.FC = () => {
     suggestedYarnYardage: number,
     patternSuggestedWeight: number,
     chosenYarnYardage: number,
-    chosenYarnWeight: number,
     includeWastage: boolean
   ) {
     console.log("Calculating yardage");
-
-    if (chosenYarnYardage > 0) {
-      // TODO add calculation
-      setSkeinCount(0);
+      const yardageOfSuggestedYarn = (patternSuggestedWeight / suggestedYarnWeight) *  suggestedYarnYardage;
+      let skeinsNeeded = yardageOfSuggestedYarn/chosenYarnYardage;
+      if (includeWastage) {
+        skeinsNeeded += skeinsNeeded * .1;
+      }
+      setSkeinCount(skeinsNeeded);
       return;
     }
-
-    if (chosenYarnWeight > 0) {
-      // TODO add calculation
-      setSkeinCount(0);
-      return;
-    }
-
-    console.log("error");
-    setSkeinCount("ERROR");
-  }
 
   function handleFormSubmit(e: React.FormEvent) {
     e.preventDefault();
@@ -45,7 +36,6 @@ const YardageCalc: React.FC = () => {
       suggestedYarnYardage,
       patternSuggestedWeight,
       chosenYarnYardage,
-      chosenYarnWeight,
       includeWastage,
     );
   }
@@ -54,7 +44,7 @@ const YardageCalc: React.FC = () => {
     <div className="Calc-container">
       <h2>Calculate Number of Skeins Needed</h2>
       <form onSubmit={handleFormSubmit}>
-        <label htmlFor="suggestedYarnWeight">Suggested Yarn Weight:</label>
+        <label htmlFor="suggestedYarnWeight">Suggested Yarn Weight per Skein:</label>
         <input
           type="number"
           id="suggestedYarnWeight"
@@ -92,16 +82,7 @@ const YardageCalc: React.FC = () => {
           onChange={(e) => 
             setChosenYarnYardage(Number(e.target.value))
           }
-        />
-        <br/>
-        <label htmlFor="chosenYarnWeight">Chosen Yarn Weight:</label>
-        <input
-          type="number"
-          id="chosenYarnWeight"
-          value={chosenYarnWeight}
-          onChange={(e) => 
-            setChosenYarnWeight(Number(e.target.value))
-          }
+          required
         />
         <br/>
         <label htmlFor="includeWastage">Include 10% wastage?:</label>
@@ -117,7 +98,9 @@ const YardageCalc: React.FC = () => {
         <br/>
         <button className="button" type="submit">Get Value</button>
         <br/>
-        <span>Skeins needed: {skeinCount}</span>
+        <span>Skeins needed rounded up: {Math.round(skeinCount)}</span>
+        <br/>
+        <span>Skeins needed unrounded: {skeinCount.toFixed(2)}</span>
       </form>
     </div>
   );
