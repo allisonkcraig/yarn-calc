@@ -1,4 +1,6 @@
 .Yardage-calc {
-  border:  2px solid blue;
-  display: flex;
+  padding: 20px;
+  background-color: #E8DFCA;
+  border-radius: 6px;
+  margin: 5px
 }
