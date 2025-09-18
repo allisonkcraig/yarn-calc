@@ -51,7 +51,7 @@ const YardageCalc: React.FC = () => {
   }
 
   return (
-    <div className="Yardage-calc">
+    <div className="Calc-container">
       <h2>Calculate Number of Skeins Needed</h2>
       <form onSubmit={handleFormSubmit}>
         <label htmlFor="suggestedYarnWeight">Suggested Yarn Weight:</label>

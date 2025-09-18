@@ -5,7 +5,11 @@ class GaugeCalc extends Component {
     super(props);
   }
   render() {
-    return "Gauge Calc coming soon"
+    return (
+      <div className="Calc-container">
+          "Gauge Calc coming soon"
+      </div>
+    )
   }
 }
 
