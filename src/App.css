@@ -1,11 +1,13 @@
 .App {
-  background-color: #F5EFE6;
-  color: #19183B;
+  background-color: #CAE0BC;
+  color: #780C28;
   min-height: 100vh;
   padding: 10px;
 }
 
 .App-header {
+  font-family: "New Rocker", system-ui;
+  color: #780C28;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -17,7 +19,6 @@
 .App-calc-container {
   display: flex;
   flex-wrap: flex;
-  width: 80%
 }
 
 /* Global Styling */
@@ -31,4 +32,12 @@
   display: inline-block;
   font-size: 16px;
   border-radius: 3px;
+}
+
+.Calc-container {
+  padding: 20px;
+  background-color: #EAFAEA;
+  border-radius: 6px;
+  margin: 5px;
+  width: 50%;
 }
