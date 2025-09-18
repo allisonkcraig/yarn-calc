@@ -19,15 +19,15 @@ const YardageCalc: React.FC = () => {
   ) {
     console.log("Calculating yardage");
 
-    if (chosenYarnYardage) {
-      setSkeinCount("hello");
+    if (chosenYarnYardage > 0) {
+      // TODO add calculation
+      setSkeinCount(0);
       return;
     }
 
-    if (chosenYarnWeight) {
-      setSkeinCount(
-        (suggestedYarnYardage / suggestedYarnWeight) / patternSuggestedWeight
-      );
+    if (chosenYarnWeight > 0) {
+      // TODO add calculation
+      setSkeinCount(0);
       return;
     }
 
@@ -39,7 +39,6 @@ const YardageCalc: React.FC = () => {
     e.preventDefault();
     console.log("You clicked submit.");
 
-    // Example values, replace with actual state/inputs
     calculateYardageBasedOnSuggestedYard(
       suggestedYarnWeight,
       suggestedYarnYardage,
@@ -59,10 +58,61 @@ const YardageCalc: React.FC = () => {
           id="suggestedYarnWeight"
           value={suggestedYarnWeight}
           onChange={(e) => 
-            setSuggestedYarnWeight(Number(e.target.value)
-          
-        )}
+            setSuggestedYarnWeight(Number(e.target.value))
+          }
         />
+
+        <label htmlFor="suggestedYarnYardage">Suggested Meters per Skein:</label>
+        <input
+          type="number"
+          id="suggestedYarnYardage"
+          value={suggestedYarnYardage}
+          onChange={(e) => 
+            setSuggestedYarnYardage(Number(e.target.value))
+          }
+        />
+
+        <label htmlFor="patternSuggestedWeight">Grams needed:</label>
+        <input
+          type="number"
+          id="patternSuggestedWeight"
+          value={patternSuggestedWeight}
+          onChange={(e) => 
+            setPatternSuggestedWeight(Number(e.target.value))
+          }
+        />
+
+        <label htmlFor="chosenYarnYardage">Chosen Yarn Yardage:</label>
+        <input
+          type="number"
+          id="chosenYarnYardage"
+          value={chosenYarnYardage}
+          onChange={(e) => 
+            setChosenYarnYardage(Number(e.target.value))
+          }
+        />
+
+        <label htmlFor="chosenYarnWeight">Chosen Yarn Weight:</label>
+        <input
+          type="number"
+          id="chosenYarnWeight"
+          value={chosenYarnWeight}
+          onChange={(e) => 
+            setChosenYarnWeight(Number(e.target.value))
+          }
+        />
+
+        <label htmlFor="includeWastage">Include 10% wastage?:</label>
+         <input
+            type="checkbox"
+            id="includeWastage"
+            name="includeWastage"
+            checked
+            onChange={(e) => 
+              setIncludeWastage(e.target.checked)
+            }
+          />
+
         <button type="submit">Get Value</button>
         <span>Skeins needed: {skeinCount}</span>
       </form>
