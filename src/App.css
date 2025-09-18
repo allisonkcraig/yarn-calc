@@ -6,6 +6,7 @@
 }
 
 .App-header {
+  font-family: "New Rocker", system-ui;
   display: flex;
   flex-direction: column;
   align-items: center;
