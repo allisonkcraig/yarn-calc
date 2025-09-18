@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import './YardageCalc.css';
 
 const YardageCalc: React.FC = () => {
   const [skeinCount, setSkeinCount] = useState<number | string>(0);
@@ -50,7 +51,7 @@ const YardageCalc: React.FC = () => {
   }
 
   return (
-    <div>
+    <div className="Yardage-calc">
       <form onSubmit={handleFormSubmit}>
         <label htmlFor="suggestedYarnWeight">Suggested Yarn Weight:</label>
         <input
