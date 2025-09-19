@@ -6,7 +6,7 @@ function App() {
   return (
     <div className="App">
       <header className="App-header">
-        <h1>Helpful Knitting and Crochet Calculators</h1>
+        <h1>Helpful Knitting & Crochet Calculators</h1>
       </header>
       <div className="App-calc-container">
         <YardageCalc />
