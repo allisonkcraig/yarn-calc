@@ -1,12 +1,11 @@
 .App {
   background-color: #cae0bc;
-  color: #780c28;
+  color: black;
   min-height: 100vh;
   padding: 10px;
 }
 
 .App-header {
-  font-family: "New Rocker", system-ui;
   color: #780c28;
   display: flex;
   flex-direction: column;
@@ -14,6 +13,7 @@
   justify-content: center;
   font-size: calc(10px + 2vmin);
   text-align: center;
+  font-family: "New Rocker", system-ui, sans-serif;
 }
 
 .App-calc-container {

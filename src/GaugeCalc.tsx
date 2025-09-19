@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 
 class GaugeCalc extends Component {
-  constructor(props) {
+  constructor(props: any) {
     super(props);
   }
   render() {
