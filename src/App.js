@@ -1,6 +1,6 @@
 import "./App.css";
-import YardageCalc from "./YardageCalc";
-import GaugeCalc from "./GaugeCalc";
+import YardageCalc from "./YardageCalc.tsx";
+import GaugeCalc from "./GaugeCalc.js";
 
 function App() {
   return (
