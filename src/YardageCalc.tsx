@@ -1,8 +1,7 @@
 import React, { useState } from "react";
-import "./YardageCalc.css";
 
 const YardageCalc: React.FC = () => {
-  const [skeinCount, setSkeinCount] = useState<number | string>(0);
+  const [skeinCount, setSkeinCount] = useState<number>(0);
   const [suggestedYarnWeight, setSuggestedYarnWeight] = useState<number>(0);
   const [suggestedYarnYardage, setSuggestedYarnYardage] = useState<number>(0);
   const [chosenYarnYardage, setChosenYarnYardage] = useState<number>(0);
