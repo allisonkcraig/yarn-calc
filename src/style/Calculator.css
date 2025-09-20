@@ -1,4 +1,6 @@
 .Calculator-container {
+  display: flex;
+  flex-direction: column;
   padding: 20px;
   margin: 10px;
   background-color: #e8eef2;
@@ -10,6 +12,7 @@
     2px 1px 6px 4px rgba(10, 10, 0, 0.5);
   flex: 1 1 300px; /* 300px min width */
   max-width: 600px;
+  font-size: large;
 }
 
 .Calculator-container h1 {
@@ -18,4 +21,20 @@
   font-optical-sizing: auto;
   font-weight: 700;
   font-style: normal;
+}
+
+.Calculator-container button {
+  margin-top: 15px;
+}
+
+.Calculator-container input {
+  margin-left: 5px;
+}
+
+.Calculator-container form {
+  margin-bottom: 5px;
+}
+
+.Calculator-container h3 {
+  margin: 0;
 }
