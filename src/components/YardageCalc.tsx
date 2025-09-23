@@ -87,10 +87,7 @@ const YardageCalc: React.FC = () => {
           id="includeWastage"
           name="includeWastage"
           checked={includeWastage}
-          onChange={(e) => {
-            console.log("click", e.target.checked);
-            setIncludeWastage(e.target.checked);
-          }}
+          onChange={(e) => setIncludeWastage(e.target.checked)}
         />
         <br />
         <button className="button" type="submit">
