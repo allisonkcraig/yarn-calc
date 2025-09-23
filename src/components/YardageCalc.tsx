@@ -8,7 +8,6 @@ const YardageCalc: React.FC = () => {
   const [chosenYarnYardage, setChosenYarnYardage] = useState<number>(0);
   const [patternSuggestedWeight, setPatternSuggestedWeight] =
     useState<number>(0);
-  const [chosenYarnWeight, setChosenYarnWeight] = useState<number>(0);
   const [includeWastage, setIncludeWastage] = useState<boolean>(false);
 
   function calculateYardageBasedOnSuggestedYard(
@@ -87,8 +86,11 @@ const YardageCalc: React.FC = () => {
           type="checkbox"
           id="includeWastage"
           name="includeWastage"
-          checked
-          onChange={(e) => setIncludeWastage(e.target.checked)}
+          checked={includeWastage}
+          onChange={(e) => {
+            console.log("click", e.target.checked);
+            setIncludeWastage(e.target.checked);
+          }}
         />
         <br />
         <button className="button" type="submit">
