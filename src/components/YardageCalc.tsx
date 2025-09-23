@@ -17,7 +17,6 @@ const YardageCalc: React.FC = () => {
     chosenYarnYardage: number,
     includeWastage: boolean
   ) {
-    console.log("Calculating yardage");
     const yardageOfSuggestedYarn =
       (patternSuggestedWeight / suggestedYarnWeight) * suggestedYarnYardage;
     let skeinsNeeded = yardageOfSuggestedYarn / chosenYarnYardage;
@@ -30,7 +29,6 @@ const YardageCalc: React.FC = () => {
 
   function handleFormSubmit(e: React.FormEvent) {
     e.preventDefault();
-    console.log("You clicked submit.");
 
     calculateYardageBasedOnSuggestedYard(
       suggestedYarnWeight,
@@ -52,6 +50,7 @@ const YardageCalc: React.FC = () => {
           id="suggestedYarnWeight"
           value={suggestedYarnWeight}
           onChange={(e) => setSuggestedYarnWeight(Number(e.target.value))}
+          required
         />
         <br />
         <label htmlFor="suggestedYarnYardage">
@@ -62,6 +61,7 @@ const YardageCalc: React.FC = () => {
           id="suggestedYarnYardage"
           value={suggestedYarnYardage}
           onChange={(e) => setSuggestedYarnYardage(Number(e.target.value))}
+          required
         />
         <br />
         <label htmlFor="patternSuggestedWeight">Grams needed:</label>
@@ -70,6 +70,7 @@ const YardageCalc: React.FC = () => {
           id="patternSuggestedWeight"
           value={patternSuggestedWeight}
           onChange={(e) => setPatternSuggestedWeight(Number(e.target.value))}
+          required
         />
         <br />
         <label htmlFor="chosenYarnYardage">Chosen Yarn Yardage:</label>
@@ -90,7 +91,16 @@ const YardageCalc: React.FC = () => {
           onChange={(e) => setIncludeWastage(e.target.checked)}
         />
         <br />
-        <button className="button" type="submit">
+        <button
+          className="button"
+          type="submit"
+          disabled={
+            suggestedYarnWeight <= 0 ||
+            suggestedYarnYardage <= 0 ||
+            patternSuggestedWeight <= 0 ||
+            chosenYarnYardage <= 0
+          }
+        >
           Get Value
         </button>
       </form>
