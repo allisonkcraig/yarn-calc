@@ -1,0 +1,6 @@
+.DS_Store
+canvasenv
+secrets.sh
+*secrets.*
+node_modules
+package-lock.json
