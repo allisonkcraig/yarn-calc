@@ -116,12 +116,10 @@ const YardageCalc: React.FC = () => {
   );
 
   return (
-    <div>
-      <Calculator
-        title="Calculate Number of Skeins Needed"
-        calcForm={yardageCalcForm}
-      />
-    </div>
+    <Calculator
+      title="Calculate Number of Skeins Needed"
+      calcForm={yardageCalcForm}
+    />
   );
 };
 

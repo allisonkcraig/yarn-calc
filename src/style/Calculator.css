@@ -10,8 +10,6 @@
   box-shadow:
     0 0 0 4px #e8eef2,
     2px 1px 6px 4px rgba(10, 10, 0, 0.5);
-  flex: 1 1 300px; /* 300px min width */
-  max-width: 600px;
   font-size: large;
 }
 
