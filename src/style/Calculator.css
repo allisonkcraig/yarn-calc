@@ -11,6 +11,7 @@
     0 0 0 4px #e8eef2,
     2px 1px 6px 4px rgba(10, 10, 0, 0.5);
   font-size: large;
+  flex: 1 1 auto;
 }
 
 .Calculator-container h1 {
