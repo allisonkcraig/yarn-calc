@@ -48,6 +48,7 @@ const GaugeCalc: React.FC = () => {
             setPatternNumStitchPerFourInch(Number(e.target.value))
           }
           required
+          min="0"
         />
         <br />
         <label htmlFor="gaugeNumStitchPerFourInch">
@@ -59,6 +60,7 @@ const GaugeCalc: React.FC = () => {
           value={gaugeNumStitchPerFourInch}
           onChange={(e) => setGaugeNumStitchPerFourInch(Number(e.target.value))}
           required
+          min="0"
         />
         <br />
         <label htmlFor="bustSizeInches">Bust Size in inches:</label>
@@ -68,6 +70,7 @@ const GaugeCalc: React.FC = () => {
           value={bustSizeInches}
           onChange={(e) => setBustSizeInches(Number(e.target.value))}
           required
+          min="0"
         />
         <br />
         <label htmlFor="positiveEase">Positive ease in Inches:</label>
@@ -76,7 +79,7 @@ const GaugeCalc: React.FC = () => {
           id="positiveEaseInches"
           value={positiveEaseInches}
           onChange={(e) => setPositiveEaseInches(Number(e.target.value))}
-          required
+          min="0"
         />
         <br />
         <button

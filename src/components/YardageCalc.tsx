@@ -51,6 +51,7 @@ const YardageCalc: React.FC = () => {
           value={suggestedYarnWeight}
           onChange={(e) => setSuggestedYarnWeight(Number(e.target.value))}
           required
+          min="0"
         />
         <br />
         <label htmlFor="suggestedYarnYardage">
@@ -62,6 +63,7 @@ const YardageCalc: React.FC = () => {
           value={suggestedYarnYardage}
           onChange={(e) => setSuggestedYarnYardage(Number(e.target.value))}
           required
+          min="0"
         />
         <br />
         <label htmlFor="patternSuggestedWeight">Grams needed:</label>
@@ -71,6 +73,7 @@ const YardageCalc: React.FC = () => {
           value={patternSuggestedWeight}
           onChange={(e) => setPatternSuggestedWeight(Number(e.target.value))}
           required
+          min="0"
         />
         <br />
         <label htmlFor="chosenYarnYardage">Chosen Yarn Yardage:</label>
@@ -80,6 +83,7 @@ const YardageCalc: React.FC = () => {
           value={chosenYarnYardage}
           onChange={(e) => setChosenYarnYardage(Number(e.target.value))}
           required
+          min="0"
         />
         <br />
         <label htmlFor="includeWastage">Include 10% wastage?:</label>
