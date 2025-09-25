@@ -98,7 +98,10 @@ const GaugeCalc: React.FC = () => {
 
   return (
     <div>
-      <Calculator title="Guage Calc" calcForm={gaugeCalcForm} />
+      <Calculator
+        title="Calculate Size based on Guage Swatch"
+        calcForm={gaugeCalcForm}
+      />
     </div>
   );
 };
