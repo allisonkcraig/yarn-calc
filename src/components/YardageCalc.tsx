@@ -43,7 +43,7 @@ const YardageCalc: React.FC = () => {
     <div>
       <form onSubmit={handleFormSubmit}>
         <label htmlFor="suggestedYarnWeight">
-          Suggested Yarn Weight per Skein:
+          Suggested yarn weight per skein:
         </label>
         <input
           type="number"
@@ -55,7 +55,7 @@ const YardageCalc: React.FC = () => {
         />
         <br />
         <label htmlFor="suggestedYarnYardage">
-          Suggested Meters per Skein:
+          Suggested yarn yards per skein:
         </label>
         <input
           type="number"
@@ -109,7 +109,7 @@ const YardageCalc: React.FC = () => {
         </button>
       </form>
       <br />
-      <h3>Skeins needed rounded up: {Math.round(skeinCount)}</h3>
+      <h3>Skeins needed rounded up: {Math.ceil(skeinCount)}</h3>
       <br />
       <h3>Skeins needed unrounded: {skeinCount.toFixed(2)}</h3>
     </div>
