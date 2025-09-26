@@ -43,7 +43,7 @@ const YardageCalc: React.FC = () => {
     <div>
       <form onSubmit={handleFormSubmit}>
         <label htmlFor="suggestedYarnWeight">
-          Suggested Yarn Weight per Skein:
+          Suggested yarn weight per skein:
         </label>
         <input
           type="number"
@@ -55,7 +55,7 @@ const YardageCalc: React.FC = () => {
         />
         <br />
         <label htmlFor="suggestedYarnYardage">
-          Suggested Meters per Skein:
+          Suggested yarn yards per skein:
         </label>
         <input
           type="number"
