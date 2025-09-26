@@ -1,3 +1,4 @@
 # Yarn Calc
-A hub for helpful crafting and fiber arts calculators
+A simple hub for helpful crafting and fiber arts calculators
 Created by Allison Craig
+view @ https://allisonkcraig.github.io/yarn-calc/
